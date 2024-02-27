@@ -319,30 +319,6 @@ void CAN_MsgInterrupt(CAN_T *tCAN, uint32_t u32IIDR)
 		
 		CAN_Receive(tCAN, u32MsgNum,&rrMsg);
         CAN_ShowMsg(&rrMsg);
-		// if ((rrMsg.FrameType == CAN_DATA_FRAME))
-		// {           		
-			// CAN_ShowMsg(&rrMsg);
-			// // printf RX only
-			// if  (!( (u32MsgNum == 6) || 
-			// 	(u32MsgNum == 7) || 
-			// 	(u32MsgNum == 22) || 
-			// 	(u32MsgNum == 23) || 
-			// 	(u32MsgNum == 4) || 
-			// 	(u32MsgNum == 5) || 
-			// 	(u32MsgNum == 20) || 
-			// 	(u32MsgNum == 21) ))
-			// {
-			// 	printf("%s -Num:%2d \r\n", (tCAN == CAN0) ? "HostA" : "DeviceB"  ,u32MsgNum);		
-			// 	CAN_ShowMsg(&rrMsg);
-			// }
-		// }
-		
-		// if(rrMsg.FrameType==CAN_REMOTE_FRAME)
-		// {
-		// 	printf("\r\n(Remote)-Num:%2d ,ID:0x%04X ,%s(0x%02X) ,len:0x%02X\r\n", u32MsgNum, rrMsg.Id,rrMsg.IdType?"EXT":"STD" ,rrMsg.IdType , rrMsg.DLC );			
-		// }
-
-//		printf("\r\n");
 	}
 }
 
